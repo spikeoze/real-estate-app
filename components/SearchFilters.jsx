@@ -12,7 +12,7 @@ import {
 import { useRouter } from "next/router";
 import { MdCancel } from "react-icons/md";
 import Image from "next/image";
-import { filterData } from "../utilities/filterData";
+import { filterData } from "../utilities/FilterData";
 
 function SearchFilters() {
   const [filters, setFilters] = useState(filterData);
