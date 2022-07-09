@@ -93,38 +93,7 @@ function ImageScrollbar({ photos }) {
     );
   }
 
-  return (
-    // <ScrollMenu
-    //   LeftArrow={LeftArrow}
-    //   RightArrow={RightArrow}
-    //   style={{ overflow: "hidden" }}
-    // >
-    <Flex
-      justifyContent="center"
-      m={2}
-      mb={5}
-      height={430}
-      padding={5}
-      boxShadow="inner"
-      wrap="wrap"
-      borderRadius={7}
-      overflowY="scroll"
-    >
-      {photos.slice(0, 3).map((item) => (
-        <Box itemID={item.id} key={item.id} p="1">
-          <Image
-            placeholder="blur"
-            blurDataURL={item.url}
-            quality={30}
-            src={item.url}
-            width={500}
-            height={300}
-            alt="house photo"
-          />
-        </Box>
-      ))}
-    </Flex>
-  );
+  
 }
 
 export default ImageScrollbar;
