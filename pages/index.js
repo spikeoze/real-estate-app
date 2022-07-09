@@ -1,6 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Flex, Box, Text, Button, Spacer, Divider } from "@chakra-ui/react";
+import {
+  Flex,
+  Box,
+  Text,
+  Button,
+  Spacer,
+  Divider,
+  Grid,
+  GridItem,
+} from "@chakra-ui/react";
 import { baseURL, fetchApi } from "../utils/fetchapi.js";
 import Property from "../components/Property";
 
@@ -14,8 +23,15 @@ export const Banner = ({
   linkName,
   buttonText,
 }) => (
-  <Flex justifyContent="center" mb={10}>
-    <Image src={imageSrc} width={500} height={300} alt="banner" />
+  <Flex justifyContent="center" m={2} mb={10} padding={5} boxShadow="lg" wrap="wrap" borderRadius={10}>
+    <Image
+      src={imageSrc}
+      width={500}
+      height={300}
+      alt="banner"
+      // layout="responsive"
+    />
+
     <Box p={5}>
       <Text color={"gray.500"} fontSize="sm" fontWeight="medium">
         {purpose}
